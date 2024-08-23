@@ -17,7 +17,7 @@ def launch_agent(agent: Meeshoo):
     while True:
         task = input(f"{ai_icon}：请吩咐{smile_icon}\n{human_icon}：")
         if task.strip().lower() == "quit":
-            break
+            break#
         reply = agent.run(task, chat_history, verbose=True)
         print(f"{ai_icon}：{reply}\n")
 
@@ -32,6 +32,7 @@ def main():
         document_qa_tool,
         directory_inspection_tool,
         finish_placeholder,
+        search_from_internet,
     ]
 
     # 定义智能体
